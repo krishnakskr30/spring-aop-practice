@@ -1,10 +1,10 @@
-package com.kskr.springaop;
+package com.kskr.springaop.data;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class AnotherDao {
+public class Dao {
     public String retrieveSomething() {
-        return "anotherDao";
+        return "Dao";
     }
 }

@@ -1,5 +1,6 @@
-package com.kskr.springaop;
+package com.kskr.springaop.business;
 
+import com.kskr.springaop.data.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
