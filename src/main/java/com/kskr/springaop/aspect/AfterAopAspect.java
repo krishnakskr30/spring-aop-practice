@@ -1,6 +1,7 @@
 package com.kskr.springaop.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -23,5 +24,10 @@ public class AfterAopAspect {
     public void afterThrowing(JoinPoint joinPoint, Object exception) {
         logger.info("{} throw exception {}", joinPoint, exception);
 
+    }
+
+    @After(value = "execution(* com.kskr.springaop.business.*.*(..))")
+    public void after(JoinPoint joinPoint) {
+        logger.info("after execution of {}", joinPoint);
     }
 }
