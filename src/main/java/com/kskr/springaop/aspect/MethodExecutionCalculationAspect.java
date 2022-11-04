@@ -13,7 +13,7 @@ public class MethodExecutionCalculationAspect {
 
     private final Logger logger = LoggerFactory.getLogger((this.getClass()));
 
-    @Around("execution(* com.kskr.springaop.aspect.CommonJoinPointConfig.businessLayerExecution())")
+    @Around("execution(* com.kskr.springaop.aspect.CommonJoinPointConfig.trackTimeAnnotation())")
     public void around(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
 
