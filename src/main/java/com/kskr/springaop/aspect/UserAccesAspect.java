@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class UserAccesAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Before("execution(* com.kskr.springaop.business.*.*(..))")
+    @Before("execution(* com.kskr.springaop.aspect.CommonJoinPointConfig.datalayerExecution())")
     public void before(JoinPoint joinPoint) {
         logger.info("Check for user access");
         logger.info("Allowed execution for {}", joinPoint);
